@@ -9,14 +9,29 @@
     <title>Electron Minimum Template</title>
 </head>
 <body>
-	<br />
-    This is a template for Electron app.
-    <br />
+
     <p id="device-info"></p>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="components/loader.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
-    <h1>Olá Mundo</h1>
+	<script>
+    var valor01, valor02, resultado 
+    function somar() { 
+        valor01 = parseInt(document.getElementById('valor01').value) 
+        valor02 = parseInt(document.getElementById('valor02').value)
+
+        resultado = valor01+ valor02 
+
+    document.getElementById('resultado').innerHTML = resultado
+    }
+    </script>
+
+
+    <h1>CALCULADORA</h1>
+    <input type="text" placeholder="Insira o primeiro valor" id="valor01">
+    <input type="text" placeholder="Insira o segundo valor" id="valor02">
+    <input type="button" value="SOMAR" id="btnSomar" onclick="somar()"> 
+    <h1 id="resultado"></h1>
 </body>
 </html>
